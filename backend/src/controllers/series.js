@@ -14,16 +14,16 @@ module.exports = {
         })
     },
     async post(req, res) {
-        const { data_id, ordem, qtd_series } = req.body
-        db.query('INSERT INTO series (data_id, ordem, qtd_series) VALUES ($1, $2, $3) RETURNING id', [data_id, ordem, qtd_series], (error, results) => {
+        const { treino_id, ordem, qtd_series } = req.body
+        db.query('INSERT INTO series (treino_id, ordem, qtd_series) VALUES ($1, $2, $3) RETURNING id', [treino_id, ordem, qtd_series], (error, results) => {
             if (error) { throw error }
             res.status(201).send(`serie add.`)
         })
     },
     async put(req, res) {
         const id = req.params.id
-        const { data_id, ordem, qtd_series } = req.body
-        db.query('UPDATE series SET data_id = $1, ordem = $2, qtd_series = $3 WHERE id = $4', [data_id, ordem, qtd_series, id], (error, results) => {
+        const { treino_id, ordem, qtd_series } = req.body
+        db.query('UPDATE series SET treino_id = $1, ordem = $2, qtd_series = $3 WHERE id = $4', [treino_id, ordem, qtd_series, id], (error, results) => {
             if (error) { throw error }
             res.status(200).send(`Modificado.`)
         })

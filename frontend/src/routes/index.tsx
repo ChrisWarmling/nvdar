@@ -3,9 +3,9 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-import Dias from '../pages/dias/Dias'
-import Categorias from '../pages/categorias/Categorias'
-import Exercicios from '../pages/exercicios/Exercicios'
+import Dias from '../pages/dias/index'
+import Categorias from '../pages/categorias/index'
+import Exercicios from '../pages/exercicios/index'
 
 const Nvdar = createMaterialBottomTabNavigator()
 
